@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dbHelper = new MyDatabaseHelper(this,"BookStore.db",
-                null,9);
+                null,1);
         Button createDatabase = (Button)findViewById(R.id.create_database);
         createDatabase.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 values.put("pages",454);
                 values.put("price",16.96);
                 db.insert("Book",null,values);
-                values.clear();;
+                values.clear();
                 //Assemble second data
                 values.put("name","The Last Symbol");
                 values.put("author","Dan Brown");
